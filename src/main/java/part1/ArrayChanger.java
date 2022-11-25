@@ -1,6 +1,6 @@
-package com.company.part1;
+package main.java.part1;
 
-import com.company.CustomArray;
+import main.java.CustomArray;
 
 import java.util.ArrayList;
 import java.util.Objects;

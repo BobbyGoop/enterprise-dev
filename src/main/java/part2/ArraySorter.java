@@ -1,6 +1,6 @@
-package com.company.part2;
+package main.java.part2;
 
-import com.company.CustomArray;
+import main.java.CustomArray;
 
 import java.util.ArrayList;
 import java.util.Comparator;

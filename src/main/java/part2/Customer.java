@@ -1,4 +1,4 @@
-package com.company.part2;
+package main.java.part2;
 
 import java.util.HashMap;
 import java.util.Map;
@@ -45,7 +45,7 @@ public class Customer {
     }
 
     public String toString() {
-        return String.format("[%d] : %s, %s %s]",
+        return String.format("[%d] : %s, %s %s",
                 this.id, this.lastName, this.firstName, this.middleName);
     }
 }

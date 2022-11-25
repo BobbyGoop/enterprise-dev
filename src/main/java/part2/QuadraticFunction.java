@@ -1,4 +1,4 @@
-package com.company.part2;
+package main.java.part2;
 
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -27,20 +27,18 @@ public class QuadraticFunction {
 
     public List<List<Double>> getEquationRoots() {
         // Array for storing X and Y values
-        Double[] res = new Double[2];
         if (hasRoots) {
             if (discriminant == 0) {
-                res[0] = -coefficientB / (2 * coefficientA);
-                res[1] = calculateFunctionValue(res[0]);
-                roots.add(Arrays.asList(res));
+                double x1 = -coefficientB / (2 * coefficientA);
+                double y1 = calculateFunctionValue(x1);
+                roots.add(Arrays.asList(x1, y1));
             } else if (discriminant > 0) {
-                res[0] = (-coefficientB + Math.sqrt(discriminant)) / (2 * coefficientA);
-                res[1] = calculateFunctionValue(res[0]);
-                roots.add(Arrays.asList(res));
-
-                res[0] = (-coefficientB - Math.sqrt(discriminant)) / (2 * coefficientA);
-                res[1] = calculateFunctionValue(res[0]);
-                roots.add(Arrays.asList(res));
+                double x1 = (-coefficientB + Math.sqrt(discriminant)) / (2 * coefficientA);
+                double y1 = calculateFunctionValue(x1);
+                double x2 = (-coefficientB - Math.sqrt(discriminant)) / (2 * coefficientA);
+                double y2 = calculateFunctionValue(x2);
+                roots.add(Arrays.asList(x1, y1));
+                roots.add(Arrays.asList(x2, y2));
             }
         } else {
             roots.add(new ArrayList<>());
@@ -48,10 +46,10 @@ public class QuadraticFunction {
         return roots;
     }
 
-    public Double[] findVertexCoordinates() {
-        Double[] res = new Double[2];
-        res[0] = -coefficientB / (2 * coefficientA);
-        res[1] = coefficientC - Math.pow(coefficientB, 2) / (4 * coefficientA);
-        return res;
+    public double[] findVertexCoordinates() {
+        return new double[]{
+                -coefficientB / (2 * coefficientA),
+                coefficientC - Math.pow(coefficientB, 2) / (4 * coefficientA)
+        };
     }
 }
