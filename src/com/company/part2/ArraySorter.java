@@ -109,7 +109,7 @@ public class ArraySorter extends CustomArray {
         return res;
     }
 
-    public int[] mergeSortRecursive() {
+    public int[] mergeSort() {
         int[] res = originalArray.clone();
         this.mergeSortRecursive(res);
         return res;
