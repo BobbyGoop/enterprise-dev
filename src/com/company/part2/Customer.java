@@ -1,6 +1,5 @@
-package com.company.lab2;
+package com.company.part2;
 
-import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Map;
 

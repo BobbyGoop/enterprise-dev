@@ -1,8 +1,7 @@
-package com.company.lab2;
+package com.company.part2;
 
 
 import java.util.ArrayList;
-import java.util.Collections;
 import java.util.Comparator;
 
 public class Main {
